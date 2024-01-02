@@ -10,7 +10,7 @@ import java.util.List;
 public class WO_012_VAO_03 extends Hooks {
 
 	@Test
-	void testDeleteButtonFunctionality() throws InterruptedException {
+	void testDeleteButtonFunctionality() {
 		WebElement weborderButton = driver.findElement(By.cssSelector("[href = '/weborder']"));
 		weborderButton.click();
 
