@@ -5,42 +5,44 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class WO_003_LP_03 extends Hooks{
-    @Test
-    public void loginButtonTest(){
-        //Navigate to weborder login page
-        WebElement orderButton = driver.findElement(By.cssSelector("[href = '/weborder']"));
-        orderButton.click();
+public class WO_003_LP_03 extends Hooks {
 
-        //Enter username
-        WebElement userName = driver.findElement(By.id("login-username-input"));
-        userName.sendKeys("Inar");
+	@Test
+	public void loginButtonTest() {
+		// Navigate to weborder login page
+		WebElement orderButton = driver.findElement(By.cssSelector("[href = '/weborder']"));
+		orderButton.click();
 
-        //Enter password
-        WebElement password = driver.findElement(By.id("login-password-input"));
-        password.sendKeys("Academy");
+		// Enter username
+		WebElement userName = driver.findElement(By.id("login-username-input"));
+		userName.sendKeys("Inar");
 
-        //Click the login button
-        WebElement loginButton = driver.findElement(By.id("login-button"));
-        loginButton.click();
+		// Enter password
+		WebElement password = driver.findElement(By.id("login-password-input"));
+		password.sendKeys("Academy");
 
-        //wait until weborder hom page is displayed
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("welcome-heading")));
+		// Click the login button
+		WebElement loginButton = driver.findElement(By.id("login-button"));
+		loginButton.click();
 
-        //Click the logout button
-        WebElement logoutButton = driver.findElement(By.id("logout-button"));
-        logoutButton.click();
+		// wait until weborder hom page is displayed
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("welcome-heading")));
 
-        //Exception can be displayed before loginHeading has any value
-        WebElement loginHeading = null;
-       try {
-           //For any unexpected web page
-           loginHeading = driver.findElement(By.xpath("//h2[text()='Login']"));
-           Assertions.assertTrue(loginHeading.isDisplayed(),"The logout " +
-                   "process failed when clicked on Logout button");
-       }catch (NoSuchElementException ex){
-           Assertions.assertNotNull(loginHeading,"The logout " +
-                   "process failed when clicked on Logout button");
-       }
-    }
+		// Click the logout button
+		WebElement logoutButton = driver.findElement(By.id("logout-button"));
+		logoutButton.click();
+
+		// Exception can be displayed before loginHeading has any value
+		WebElement loginHeading = null;
+		try {
+			// For any unexpected web page
+			loginHeading = driver.findElement(By.xpath("//h2[text()='Login']"));
+			Assertions.assertTrue(loginHeading.isDisplayed(),
+					"The logout " + "process failed when clicked on Logout button");
+		}
+		catch (NoSuchElementException ex) {
+			Assertions.assertNotNull(loginHeading, "The logout " + "process failed when clicked on Logout button");
+		}
+	}
+
 }

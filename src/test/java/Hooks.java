@@ -12,44 +12,46 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class Hooks {
-    protected static WebDriver driver;
 
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	protected static WebDriver driver;
 
-    @BeforeAll
-    public static void setUpBeforeTest() {
-        String browser = System.getProperty("browser", "chrome");
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-        switch (browser.toUpperCase()) {
-            case "firefox":
-                FirefoxOptions firefoxOptions = new FirefoxOptions();
-                firefoxOptions.addArguments("--width=1920");
-                firefoxOptions.addArguments("--height=1080");
-                driver = new FirefoxDriver(firefoxOptions);
-                break;
+	@BeforeAll
+	public static void setUpBeforeTest() {
+		String browser = System.getProperty("browser", "chrome");
 
-            case "edge":
-                EdgeOptions edgeOptions = new EdgeOptions();
-                edgeOptions.addArguments("--start-maximized");
-                edgeOptions.addArguments("--ignore-certificate-errors");
-                driver = new EdgeDriver(edgeOptions);
-                break;
-            case "chrome":
-            default:
-                ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.addArguments("--start-maximized");
-                chromeOptions.addArguments("--ignore-certificate-errors");
-                driver = new ChromeDriver(chromeOptions);
-                break;
-        }
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get("https://InarAcademy:Fk160621.@test.inar-academy.com/");
-    }
+		switch (browser.toUpperCase()) {
+			case "firefox":
+				FirefoxOptions firefoxOptions = new FirefoxOptions();
+				firefoxOptions.addArguments("--width=1920");
+				firefoxOptions.addArguments("--height=1080");
+				driver = new FirefoxDriver(firefoxOptions);
+				break;
 
-    @AfterAll
-    public static void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
-    }
+			case "edge":
+				EdgeOptions edgeOptions = new EdgeOptions();
+				edgeOptions.addArguments("--start-maximized");
+				edgeOptions.addArguments("--ignore-certificate-errors");
+				driver = new EdgeDriver(edgeOptions);
+				break;
+			case "chrome":
+			default:
+				ChromeOptions chromeOptions = new ChromeOptions();
+				chromeOptions.addArguments("--start-maximized");
+				chromeOptions.addArguments("--ignore-certificate-errors");
+				driver = new ChromeDriver(chromeOptions);
+				break;
+		}
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get("https://InarAcademy:Fk160621.@test.inar-academy.com/");
+	}
+
+	@AfterAll
+	public static void tearDown() {
+		if (driver != null) {
+			driver.quit();
+		}
+	}
+
 }
