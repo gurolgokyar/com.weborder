@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: WO_004_CF_01
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.653 s <<< FAILURE! -- in WO_004_CF_01
+WO_004_CF_01.calculateButtonTest -- Time elapsed: 4.046 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: After the calculation, actual result and expected different each other ==> expected: <637.5> but was: <638>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1156)
+	at WO_004_CF_01.calculateButtonTest(WO_004_CF_01.java:45)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+

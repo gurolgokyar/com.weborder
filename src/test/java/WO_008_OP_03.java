@@ -1,11 +1,9 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class WO_008_OP_03 extends Hooks {
 
@@ -66,12 +64,16 @@ public class WO_008_OP_03 extends Hooks {
 		WebElement processButton = driver.findElement(By.xpath("//button[text() = 'Process']"));
 		processButton.click();
 
-		wait.until(ExpectedConditions
-			.visibilityOfElementLocated(By.xpath("//div[5]/span/em[contains(text(), " + "'Invalid Zip Code')]")));
+		WebElement alert = null;
 
-		Assertions.assertTrue(
-				driver.findElement(By.xpath("//div[5]/span/em[contains(text(), 'Invalid Zip Code')]")).isDisplayed(),
-				"Expected message : Invalid Zip Code. Enter again! Did not displayed");
+		try {
+			alert = driver.findElement(By.partialLinkText("Zip Code"));
+		}
+		catch (NoSuchElementException ex) {
+
+		}
+
+		Assertions.assertNotNull(alert, "Expected message : Invalid Zip Code. Enter again! Did not displayed");
 
 	}
 

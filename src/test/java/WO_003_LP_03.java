@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 public class WO_003_LP_03 extends Hooks {
 
 	@Test
-	public void loginButtonTest() {
+	public void testLogoutButton() {
 		// Navigate to weborder login page
 		WebElement orderButton = driver.findElement(By.cssSelector("[href = '/weborder']"));
 		orderButton.click();
