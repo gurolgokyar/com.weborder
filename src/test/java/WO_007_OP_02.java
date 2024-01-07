@@ -1,11 +1,12 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
-public class WO_006_OP_02 extends Hooks {
+public class WO_007_OP_02 extends Hooks {
 
 	@Test
 	void orderPlacementWithOutCalculationTest() {
@@ -48,6 +49,9 @@ public class WO_006_OP_02 extends Hooks {
 
 		WebElement zipCode = driver.findElement(By.cssSelector("[placeholder = 'Enter your zip code']"));
 		zipCode.sendKeys("78701");
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scroll(0, 1000)");
 
 		WebElement cartType = driver.findElement(By.cssSelector("[value= 'Mastercard']"));
 		cartType.click();
