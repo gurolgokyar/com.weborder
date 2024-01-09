@@ -4,26 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2bba792-067b-4a5e-ad92-3c516464843d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/inar/pages/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/inar/pages/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/inar/pages/WebautomationPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/inar/pages/autocomplate/MultipleAndRemote.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/inar/pages/draggable/ConstantMovementPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/inar/pages/draggable/DefaultFunctionalityPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/inar/pages/draggable/DraggablePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/inar/utils/Driver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/inar/utils/Pages.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestCases/AutoScrollingPageTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestCases/ConstantMovementPageTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestCases/DefaultFunctionalityTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestCases/Hooks.java" afterDir="false" />
-    </list>
+    <list default="true" id="c2bba792-067b-4a5e-ad92-3c516464843d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
